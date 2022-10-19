@@ -1,0 +1,226 @@
+/* Variables and general definitions */ 
+
+:root{
+  --ccr-blue: #005F86;
+  --ccr-grey: #898D8D;
+  --light-blue: #71B2C9;
+  --light-grey: #d9d9d9;
+  --pink: #B20F67;
+}
+
+* {
+  font-family: Arial;
+}
+
+/* Titles */
+/*
+h1, h2{
+  color: var(--ccr-blue)
+}
+*/
+/* Containers */ 
+
+.cont-betw{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.cont-even{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cont-col-even{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.cont-col-cent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cont-col-cent2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cont-center {
+  display: flex;
+  justify-content: center;
+}
+
+.cont-colrev{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.centerself {
+  width: 100%;
+  height: 100%;
+  align-self: center
+}
+
+/* Generic links */
+a{
+  text-decoration: none;
+  color: var(--ccr-blue)
+}
+
+a:hover{
+  text-decoration: underline;
+  color: var(--ccr-blue)
+}
+
+/* Buttons */ 
+
+button.transparent{
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+button.download{
+  background-color: var(--light-blue);
+  background-repeat: no-repeat;
+  border: 1px solid var(--ccr-blue);
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+/* Tables for view page */ 
+
+table.main-infos{
+  border: 1px solid var(--ccr-grey); 
+  width: 50%
+}
+
+tr.main-infos:hover{
+  background-color: var(--light-blue);
+}
+
+td.main-infos:nth-child(1){
+  font-weight: bold
+}
+
+table.node-details{
+  border: 1px solid var(--ccr-grey); 
+  margin: auto;
+  word-break: break-all;
+}
+
+tr.node-details:hover{
+  background-color: var(--light-blue);
+}
+
+th.node-details{
+  border-bottom: 2px solid var(--ccr-grey);
+  text-align: center;
+}
+
+td.node-details{
+  border-bottom: 1px solid var(--ccr-grey);
+  text-align: center;
+  /*
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  */
+}
+
+td.node-details:nth-child(1){
+  font-weight: bold
+}
+
+/* General table with lots of data*/
+
+table.data{
+  border: 0px; 
+  width: 100%;
+}
+
+tr.data:hover{
+  background-color: var(--light-blue);
+}
+
+th.data{
+  border-bottom: 2px solid var(--ccr-grey);
+  padding: 5px;
+  margin-right: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+td.data{
+  border-bottom: 1px solid var(--ccr-grey);
+  padding: 5px;
+  margin-right: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+td.data:hover{
+  overflow: visible;
+  white-space: normal;
+}
+
+/* Specific for table displaying all datasets */ 
+td.datasets:nth-child(n+2):nth-child(n-3){
+  min-width: 40%;
+}
+
+/* Specific for table displaying all processes */ 
+td.processes:nth-child(2){
+  min-width: 40%;
+}
+
+/* Specific for table displaying columns of a dataset */ 
+td.columns:nth-child(4){
+  min-width: 40%;
+}
+
+/* Tabs */
+
+.custom-tabs {
+    width: 100% !important;
+}
+
+.custom-tabs-container {
+    padding: 0px 0px !important;
+    border-bottom: 0px !important;
+}
+
+.custom-tab {
+    color:white !important;
+    background-color: var(--ccr-blue) !important;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+    border-top: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+    border-bottom: 2px solid var(--pink) !important;
+    padding: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.custom-tab--selected {
+    color: black !important;
+    background-color: white !important;
+    box-shadow: 1px 1px 0px white !important;
+    border-left: 2px solid var(--pink) !important;
+    border-right: 2px solid var(--pink) !important;
+    border-top: 2px solid var(--pink) !important;
+    border-bottom: 0px !important
+}
